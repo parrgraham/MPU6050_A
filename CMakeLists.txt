@@ -1,7 +1,7 @@
 # CMake simple example
 
 ## [main]
-
+## this will also be a great place to start
 # Almost all CMake files should start with this
 # You should always specify a range with the newest
 # and oldest tested versions of CMake. This will ensure
