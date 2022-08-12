@@ -12,6 +12,7 @@ static void mpu6050_reset() {
 //def need to anki up some of the basic commands
 //also data types and binary table and pointers
 //also binary math tricks
+//critical that I figure out Github
 static void mpu6050_read_raw(int16_t accel[3], int16_t gyro[3], int16_t *temp) {
 
     uint8_t buffer[6];
@@ -23,7 +24,8 @@ static void mpu6050_read_raw(int16_t accel[3], int16_t gyro[3], int16_t *temp) {
     for (int i = 0; i < 3; i++) {
         accel[i] = (buffer[i * 2] << 8 | buffer[(i * 2) + 1]);
     }
-
+//I am looking to intern at your company ,I am looking to learn from established embedded developers
+    //
     val = 0x43;
     i2c_write_blocking(i2c_default, addr, &val, 1, true);
     i2c_read_blocking(i2c_default, addr, buffer, 6, false);  // False - finished with bus
